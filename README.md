@@ -12,8 +12,8 @@ Make sure you have the following installed on your machine:<br>
 **1. Clone the repository**<br>
 Open your terminal and run:<br>
 ```bash
-git clone <paste-your-repository-url-here>
-cd <your-repository-folder-name>
+git clone https://github.com/wannabes48/myshop/
+cd myshop
 ```
 
 **2. Activate the virtual environment**<br>
