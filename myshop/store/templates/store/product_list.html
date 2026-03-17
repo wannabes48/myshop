@@ -1,0 +1,18 @@
+{% extends 'store/base.html' %}
+
+{% block content %}
+    <h2>Marketplace</h2>
+    <div class="product-grid">
+        {% for product in products %}
+            <div class="card">
+                <img src="{{ product.image_url|default:'https://via.placeholder.com/200' }}" alt="{{ product.name }}">
+                <h3>{{ product.name }}</h3>
+                <p>KSh {{ product.price }}</p>
+                <p><small>{{ product.category }}</small></p>
+                <a href="{% url 'add_to_cart' product.id %}" class="btn">Add to Cart</a>
+            </div>
+        {% empty %}
+            <p>No products available right now.</p>
+        {% endfor %}
+    </div>
+{% endblock %}

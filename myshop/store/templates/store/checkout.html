@@ -1,0 +1,15 @@
+{% extends 'store/base.html' %}
+
+{% block content %}
+    <h2>M-Pesa Checkout Simulation</h2>
+    <p>Total Amount to Pay: <strong>KSh {{ total }}</strong></p>
+    
+    <form method="POST" style="margin-top: 20px; background: white; padding: 20px; border-radius: 8px;">
+        {% csrf_token %}
+        <div class="form-group">
+            <label for="phone_number">M-Pesa Phone Number:</label><br><br>
+            <input type="text" id="phone_number" name="phone_number" placeholder="e.g. 0712345678" required>
+        </div>
+        <button type="submit" class="btn" onclick="this.innerHTML='Processing...'">Pay Now</button>
+    </form>
+{% endblock %}
